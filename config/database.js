@@ -9,6 +9,12 @@ const connectDB = async () => {
       useCreateIndex: true
     })
 
+    // !!! useNewUrlParser: true, useUnifiedTopology: true ARE DEPRECATED!!! -- might need to use this if app is crashing:
+    // const conn = await mongoose.connect(process.env.DB_STRING, {
+    //     useFindAndModify: false,
+    //     useCreateIndex: true,
+    //   });
+  
     console.log(`MongoDB Connected: ${conn.connection.host}`)
   } catch (err) {
     console.error(err)

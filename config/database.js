@@ -14,6 +14,7 @@ const connectDB = async () => {
     //     useFindAndModify: false,
     //     useCreateIndex: true,
     //   });
+    // SOURCE: https://mongoosejs.com/docs/5.x/docs/deprecations.html
   
     console.log(`MongoDB Connected: ${conn.connection.host}`)
   } catch (err) {
